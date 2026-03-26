@@ -1,40 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
-    <style>
-        body { margin: 0; padding: 0; background-color: #ffffff; }
-        model-viewer { width: 100vw; height: 100vh; }
-        .ar-button {
-            background-color: #000000;
-            border-radius: 50px;
-            border: 2px solid #ffffff;
-            position: absolute;
-            bottom: 200px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 15px 40px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #ffffff;
-            z-index: 999;
-        }
-    </style>
 </head>
-<body>
+<body style="margin: 0;">
+
     <model-viewer 
-        src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Heart/glTF-Binary/Heart.glb" 
+        src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
         ar 
         ar-modes="webxr scene-viewer quick-look" 
         camera-controls 
         shadow-intensity="1" 
-        auto-rotate>
+        auto-rotate
+        style="width: 100vw; height: 100vh;">
         
-        <button slot="ar-button" class="ar-button">
-            ❤️ BẤM ĐỂ XEM AR ❤️
+        <button slot="ar-button" style="position: absolute; bottom: 200px; left: 50%; transform: translateX(-50%); padding: 15px 30px; background: #000; color: #fff; border-radius: 30px; border: none; font-weight: bold;">
+            🚀 BẤM ĐỂ XEM AR
         </button>
     </model-viewer>
+
 </body>
 </html>
