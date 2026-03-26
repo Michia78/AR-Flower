@@ -1,53 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
     <style>
-        body { margin: 0; padding: 0; overflow: hidden; }
-        /* Cài đặt khung nhìn 3D */
-        model-viewer { 
-            width: 100vw; 
-            height: 100vh; 
-            background-color: #f8f8f8; 
-        }
-        /* THIẾT KẾ LẠI NÚT BẤM ĐỂ KHÔNG BỊ CHÌM */
+        body { margin: 0; padding: 0; background-color: #ffffff; }
+        model-viewer { width: 100vw; height: 100vh; }
         .ar-button {
-            background-color: #ffffff;
-            border-radius: 30px; /* Bo tròn sang trọng */
-            border: 2px solid #C0C0C0; /* Viền màu bạc */
+            background-color: #000000;
+            border-radius: 50px;
+            border: 2px solid #ffffff;
             position: absolute;
-            bottom: 100px; /* ĐẨY LÊN CAO: Cách đáy màn hình 100px để không bị che */
+            bottom: 200px;
             left: 50%;
             transform: translateX(-50%);
-            padding: 15px 30px;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
+            padding: 15px 40px;
+            font-size: 18px;
             font-weight: bold;
-            color: #333;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Tạo bóng cho nút nổi lên */
-            white-space: nowrap;
+            color: #ffffff;
             z-index: 999;
         }
     </style>
 </head>
 <body>
-
     <model-viewer 
-        src="https://modelviewer.dev/shared-assets/models/Rose.glb" 
+        src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Heart/glTF-Binary/Heart.glb" 
         ar 
         ar-modes="webxr scene-viewer quick-look" 
         camera-controls 
-        tone-mapping="neutral" 
         shadow-intensity="1" 
-        ar-placement="floor"
         auto-rotate>
         
         <button slot="ar-button" class="ar-button">
-            ✨ XEM TRANG SỨC AR ✨
+            ❤️ BẤM ĐỂ XEM AR ❤️
         </button>
-
     </model-viewer>
-
 </body>
 </html>
